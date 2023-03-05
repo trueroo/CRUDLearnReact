@@ -1,3 +1,5 @@
+import * as React from 'react';
+
 import './app-filter.css';
 
 const AppFilter = (props) => {
@@ -11,12 +13,7 @@ const AppFilter = (props) => {
 		const active = props.filter === name;
 		const clazz = active ? 'btn-light' : 'btn-outline-light';
 		return (
-			<button
-				type="button"
-				className={`btn ${clazz}`}
-				key={name}
-				onClick={() => props.onFilterSelect(name)}
-			>
+			<button type="button" className={`btn ${clazz}`} key={name} onClick={() => props.onFilterSelect(name)}>
 				{label}
 			</button>
 		);

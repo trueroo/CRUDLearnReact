@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 
 import AppInfo from '../app-info/app-info';
 import SearchPanel from '../search-panel/search-panel';
@@ -106,17 +106,11 @@ class App extends Component {
 
 		return (
 			<div className="app">
-				<AppInfo
-					employees={employees}
-					increased={increased}
-				/>
+				<AppInfo employees={employees} increased={increased} />
 
 				<div className="search-panel">
 					<SearchPanel onUpdateSearch={this.onUpdateSearch} />
-					<AppFilter
-						filter={filter}
-						onFilterSelect={this.onFilterSelect}
-					/>
+					<AppFilter filter={filter} onFilterSelect={this.onFilterSelect} />
 				</div>
 
 				<EmployeesList

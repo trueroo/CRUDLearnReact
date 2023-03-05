@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 
 import './employees-add-form.css';
 
@@ -33,10 +33,7 @@ class EmployeesAddForm extends Component {
 		return (
 			<div className="app-add-form">
 				<h3>Add new employee</h3>
-				<form
-					className="add-form d-flex"
-					onSubmit={this.onSubmit}
-				>
+				<form className="add-form d-flex" onSubmit={this.onSubmit}>
 					<input
 						type="text"
 						className="form-control new-post-label"
@@ -54,10 +51,7 @@ class EmployeesAddForm extends Component {
 						onChange={this.onValueChange}
 					/>
 
-					<button
-						type="submit"
-						className="btn btn-outline-light"
-					>
+					<button type="submit" className="btn btn-outline-light">
 						Add
 					</button>
 				</form>
